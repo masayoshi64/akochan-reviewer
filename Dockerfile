@@ -1,10 +1,10 @@
-FROM rust:1.45.2
+FROM rust:1.51.0
 
 
 # install akochan deps
 RUN set -ex \
   && apt-get update && apt-get install -y \
-    libboost-all-dev \
+  libboost-all-dev \
   && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 
